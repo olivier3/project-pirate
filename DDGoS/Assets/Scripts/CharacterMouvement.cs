@@ -5,6 +5,7 @@ public class CharacterMouvement : MonoBehaviour
     private float JumpForce = 3f;
     public float MoveSpeed = 2f;
     private GameObject ObjectCharacter;
+    private GameObject ObjectCharacterImage;
     private Rigidbody2D ObjectRigidbody;
     public bool isGrounded = true;
 
@@ -13,16 +14,23 @@ public class CharacterMouvement : MonoBehaviour
     {
         ObjectRigidbody = GetComponent<Rigidbody2D>();
         ObjectCharacter = GameObject.Find("Character");
+        ObjectCharacterImage = ObjectCharacter.transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
     private void Update()
     {
         if (Input.GetKey(KeyCode.D))
+        {
             transform.position += Time.deltaTime * MoveSpeed * Vector3.right;
+            ObjectCharacterImage.GetComponent<SpriteRenderer>().flipX = false;
+        }
 
         if (Input.GetKey(KeyCode.A))
+        {
             transform.position += Time.deltaTime * MoveSpeed * Vector3.left;
+            ObjectCharacterImage.GetComponent<SpriteRenderer>().flipX = true;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();

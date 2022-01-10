@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 122422560}
   - component: {fileID: 122422561}
   m_Layer: 0
-  m_Name: 1
+  m_Name: '[0]CharacterImage'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
