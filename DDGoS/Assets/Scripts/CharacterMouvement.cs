@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterMouvement : MonoBehaviour
 {
-    private float JumpForce = 3f;
+    private float JumpForce = 4f;
     public float MoveSpeed = 2f;
     private GameObject ObjectCharacter;
     private GameObject ObjectCharacterImage;

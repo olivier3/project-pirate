@@ -8,12 +8,6 @@ public class BombExplosion : MonoBehaviour
 
     private float Timer = 3f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -23,7 +17,7 @@ public class BombExplosion : MonoBehaviour
 
             if (Timer <= 0)
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
     }
